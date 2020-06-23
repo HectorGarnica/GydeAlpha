@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profileBuilder.MentorSkillPromptFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="What would you like to be mentored in? "
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.125" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Next"
+            android:textColor="@color/colorActionBar"
+            app:layout_constraintBottom_toTopOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.947"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.432" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/search_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+            <SearchView
+                android:id="@+id/input_topic_searchView"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:iconifiedByDefault="false"
+                android:padding="5dp"
+                android:queryHint='"mobile development"' />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <GridView
+            android:id="@+id/mentor_skill_gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:columnWidth="100dp"
+            android:gravity="center_horizontal"
+            android:horizontalSpacing="3dp"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mentor_topic_recent_bubbles"
+            app:layout_constraintVertical_bias="0.0"
+            tools:listitem="@layout/grid_view_topic_item" />
+
+        <GridView
+            android:id="@+id/mentor_topic_recent_bubbles"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:columnWidth="50dp"
+            android:horizontalSpacing="3dp"
+            android:verticalSpacing="8dp"
+            android:numColumns="2"
+            android:stretchMode="columnWidth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_container"
+            tools:listitem="@layout/selected_topic_item">
+
+
+        </GridView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

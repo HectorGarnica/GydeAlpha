@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF6F00</color>
+    <color name="colorPrimaryDark">#E65100</color>
+    <color name="colorAccent">@color/colorPrimary</color>
+    <color name="colorActionBar">@android:color/background_light</color>
+    <color name ="colorBlack">#000000</color>
+    <color name="colorActiveTab">@color/colorPrimary</color>
+    <color name="colorInactiveTab">@android:color/darker_gray</color>
+    <color name="colorInactiveTopic">#DDDDDD</color>
+    <color name="colorActiveTopic">#FFA662</color>
+    <color name="gray">#DDDDDD</color>
+</resources>

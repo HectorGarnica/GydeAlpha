@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.FindMentorsFragment"
+    android:orientation="vertical">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/findaMentorSearchCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="25dp"
+        android:layout_marginTop="10dp">
+
+        <SearchView
+            android:id="@+id/findAMentor_searchView"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+
+            android:padding="5dp"
+            android:queryHint='"mobile development"' />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_parent_findMentors"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/mentor_row_item"/>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "471632103987",
+    "firebase_url": "https://gydealpha.firebaseio.com",
+    "project_id": "gydealpha",
+    "storage_bucket": "gydealpha.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:471632103987:android:f92d799d141c259c65f146",
+        "android_client_info": {
+          "package_name": "com.example.gydealpha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "471632103987-5b3f5ojqddl8v04ggm9ar75n948vmuut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6_bPgAF6HmHNpZYos5WtDuJRLMie5f54"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "471632103987-5b3f5ojqddl8v04ggm9ar75n948vmuut.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

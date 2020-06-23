@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.home.BeAMentorFragment">
+
+
+    <TextView
+        android:id="@+id/notAMentorTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:padding="30dp"
+        android:text="You are not a mentor yet"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/notAMentorButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:text="Sign Up to be a mentor"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/beAMentorRecyler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_my_mentors"
+
+        />
+
+
+
+
+</LinearLayout>

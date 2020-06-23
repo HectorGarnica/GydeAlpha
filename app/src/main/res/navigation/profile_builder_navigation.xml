@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_builder_navigation"
+    app:startDestination="@id/namePromptFragment">
+
+    <fragment
+        android:id="@+id/namePromptFragment"
+        android:name="com.example.gydealpha.profileBuilder.NamePromptFragment"
+        android:label="fragment_name_prompt"
+        tools:layout="@layout/fragment_name_prompt" >
+        <action
+            android:id="@+id/action_namePromptFragment_to_institutionPromptFragment"
+            app:destination="@id/institutionPromptFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/institutionPromptFragment"
+        android:name="com.example.gydealpha.profileBuilder.InstitutionPromptFragment"
+        android:label="fragment_institution_prompt"
+        tools:layout="@layout/fragment_institution_prompt" >
+
+        <argument android:name="firstNameArg"
+                  android:defaultValue="None"/>
+        <argument android:name="lastNameArg"
+                  android:defaultValue="None"/>
+
+        <action
+            android:id="@+id/action_institutionPromptFragment_to_majorPromptFragment"
+            app:destination="@id/majorPromptFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/majorPromptFragment"
+        android:name="com.example.gydealpha.profileBuilder.MajorPromptFragment"
+        android:label="fragment_major_prompt"
+        tools:layout="@layout/fragment_major_prompt" >
+        <argument android:name="firstNameArg"
+            android:defaultValue="None"/>
+        <argument android:name="lastNameArg"
+            android:defaultValue="None"/>
+        <argument android:name="institutionArg"
+            android:defaultValue="None"/>
+
+        <action
+            android:id="@+id/action_majorPromptFragment_to_mentorSkillPromptFragment"
+            app:destination="@id/mentorSkillPromptFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mentorSkillPromptFragment"
+        android:name="com.example.gydealpha.profileBuilder.MentorSkillPromptFragment"
+        android:label="fragment_mentor_skill_prompt"
+        tools:layout="@layout/fragment_mentor_skill_prompt" >
+        <argument android:name="firstNameArg"
+            android:defaultValue="None"/>
+        <argument android:name="lastNameArg"
+            android:defaultValue="None"/>
+        <argument android:name="institutionArg"
+            android:defaultValue="None"/>
+        <argument android:name="major1Arg"
+            android:defaultValue="None"/>
+        <argument android:name="major2Arg"
+            android:defaultValue="None"/>
+
+        <action
+            android:id="@+id/action_mentorSkillPromptFragment_to_personalExpertisePromptFragment"
+            app:destination="@id/personalExpertisePromptFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/personalExpertisePromptFragment"
+        android:name="com.example.gydealpha.profileBuilder.PersonalExpertisePromptFragment"
+        android:label="fragment_personal_expertise_prompt"
+        tools:layout="@layout/fragment_personal_expertise_prompt" >
+        <argument android:name="firstNameArg"
+            android:defaultValue="None"/>
+        <argument android:name="lastNameArg"
+            android:defaultValue="None"/>
+        <argument android:name="institutionArg"
+            android:defaultValue="None"/>
+        <argument android:name="major1Arg"
+            android:defaultValue="None"/>
+        <argument android:name="major2Arg"
+            android:defaultValue="None"/>
+        <argument android:name="mentorSkillArg"
+             android:defaultValue="None"/>
+
+        <action
+            android:id="@+id/action_personalExpertisePromptFragment_to_profilePicturePrompt"
+            app:destination="@id/profilePicturePrompt"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/profilePicturePrompt"
+        android:name="com.example.gydealpha.profileBuilder.ProfilePicturePrompt"
+        android:label="fragment_profile_picture_prompt"
+        tools:layout="@layout/fragment_profile_picture_prompt">
+
+        <argument android:name="firstNameArg"
+            android:defaultValue="None"/>
+        <argument android:name="lastNameArg"
+            android:defaultValue="None"/>
+        <argument android:name="institutionArg"
+            android:defaultValue="None"/>
+        <argument android:name="major1Arg"
+            android:defaultValue="None"/>
+        <argument android:name="major2Arg"
+            android:defaultValue="None"/>
+        <argument android:name="mentorSkillArg"
+            android:defaultValue="None"/>
+        <argument android:name="personalSkillArg"
+            android:defaultValue="None"/>
+
+    </fragment>
+
+</navigation>
